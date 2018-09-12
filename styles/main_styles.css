@@ -535,7 +535,7 @@ section
 	line-height: 0.75;
 	margin-top: 12px;
 }
-.Index_content
+.index_content
 {
 	
 }
@@ -554,13 +554,13 @@ section
 	width: 3px;
 	background: #8583e1;
 }
-.Index_title
+.index_title
 {
 	font-size: 30px;
 	font-weight: 700;
 	color: #100f3a;
 }
-.Index_text
+.index_text
 {
 	margin-top: 31px;
 }

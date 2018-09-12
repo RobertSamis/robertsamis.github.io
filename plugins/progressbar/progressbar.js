@@ -936,7 +936,7 @@ var Tweenable = (function () {
    *  with WebKit's CSS transitions `-webkit-transition-timing-function`
    *  CSS property.
    *
-   *  The W3C has more information Index CSS3 transition timing functions:
+   *  The W3C has more information index CSS3 transition timing functions:
    *  http://www.w3.org/TR/css3-transitions/#transition-timing-function_tag
    *
    *  @param {number} x1

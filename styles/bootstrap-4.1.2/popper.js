@@ -810,15 +810,15 @@ function find(arr, check) {
  * @argument value
  * @returns index or -1
  */
-function findIndex(arr, prop, value) {
-  // use native findIndex if supported
-  if (Array.prototype.findIndex) {
-    return arr.findIndex(function (cur) {
+function findindex(arr, prop, value) {
+  // use native findindex if supported
+  if (Array.prototype.findindex) {
+    return arr.findindex(function (cur) {
       return cur[prop] === value;
     });
   }
 
-  // use `find` + `indexOf` if `findIndex` isn't supported
+  // use `find` + `indexOf` if `findindex` isn't supported
   var match = find(arr, function (obj) {
     return obj[prop] === value;
   });
@@ -836,7 +836,7 @@ function findIndex(arr, prop, value) {
  * @returns {dataObject}
  */
 function runModifiers(modifiers, data, ends) {
-  var modifiersToRun = ends === undefined ? modifiers : modifiers.slice(0, findIndex(modifiers, 'name', ends));
+  var modifiersToRun = ends === undefined ? modifiers : modifiers.slice(0, findindex(modifiers, 'name', ends));
 
   modifiersToRun.forEach(function (modifier) {
     if (modifier.function) {
@@ -1903,7 +1903,7 @@ var modifiers = {
    * @inner
    */
   shift: {
-    /** @prop {number} order=100 - Index used to define the order of execution */
+    /** @prop {number} order=100 - index used to define the order of execution */
     order: 100,
     /** @prop {Boolean} enabled=true - Whether the modifier is enabled or not */
     enabled: true,
@@ -1950,7 +1950,7 @@ var modifiers = {
    * @inner
    */
   offset: {
-    /** @prop {number} order=200 - Index used to define the order of execution */
+    /** @prop {number} order=200 - index used to define the order of execution */
     order: 200,
     /** @prop {Boolean} enabled=true - Whether the modifier is enabled or not */
     enabled: true,
@@ -1980,7 +1980,7 @@ var modifiers = {
    * @inner
    */
   preventOverflow: {
-    /** @prop {number} order=300 - Index used to define the order of execution */
+    /** @prop {number} order=300 - index used to define the order of execution */
     order: 300,
     /** @prop {Boolean} enabled=true - Whether the modifier is enabled or not */
     enabled: true,
@@ -2011,13 +2011,13 @@ var modifiers = {
    * Modifier used to make sure the reference and its popper stay near eachothers
    * without leaving any gap between the two. Expecially useful when the arrow is
    * enabled and you want to assure it to point to its reference element.
-   * It cares only Index the first axis, you can still have poppers with margin
+   * It cares only index the first axis, you can still have poppers with margin
    * between the popper and its reference element.
    * @memberof modifiers
    * @inner
    */
   keepTogether: {
-    /** @prop {number} order=400 - Index used to define the order of execution */
+    /** @prop {number} order=400 - index used to define the order of execution */
     order: 400,
     /** @prop {Boolean} enabled=true - Whether the modifier is enabled or not */
     enabled: true,
@@ -2036,7 +2036,7 @@ var modifiers = {
    * @inner
    */
   arrow: {
-    /** @prop {number} order=500 - Index used to define the order of execution */
+    /** @prop {number} order=500 - index used to define the order of execution */
     order: 500,
     /** @prop {Boolean} enabled=true - Whether the modifier is enabled or not */
     enabled: true,
@@ -2058,7 +2058,7 @@ var modifiers = {
    * @inner
    */
   flip: {
-    /** @prop {number} order=600 - Index used to define the order of execution */
+    /** @prop {number} order=600 - index used to define the order of execution */
     order: 600,
     /** @prop {Boolean} enabled=true - Whether the modifier is enabled or not */
     enabled: true,
@@ -2093,7 +2093,7 @@ var modifiers = {
    * @inner
    */
   inner: {
-    /** @prop {number} order=700 - Index used to define the order of execution */
+    /** @prop {number} order=700 - index used to define the order of execution */
     order: 700,
     /** @prop {Boolean} enabled=false - Whether the modifier is enabled or not */
     enabled: false,
@@ -2112,7 +2112,7 @@ var modifiers = {
    * @inner
    */
   hide: {
-    /** @prop {number} order=800 - Index used to define the order of execution */
+    /** @prop {number} order=800 - index used to define the order of execution */
     order: 800,
     /** @prop {Boolean} enabled=true - Whether the modifier is enabled or not */
     enabled: true,
@@ -2136,7 +2136,7 @@ var modifiers = {
    * @inner
    */
   computeStyle: {
-    /** @prop {number} order=850 - Index used to define the order of execution */
+    /** @prop {number} order=850 - index used to define the order of execution */
     order: 850,
     /** @prop {Boolean} enabled=true - Whether the modifier is enabled or not */
     enabled: true,
@@ -2178,7 +2178,7 @@ var modifiers = {
    * @inner
    */
   applyStyle: {
-    /** @prop {number} order=900 - Index used to define the order of execution */
+    /** @prop {number} order=900 - index used to define the order of execution */
     order: 900,
     /** @prop {Boolean} enabled=true - Whether the modifier is enabled or not */
     enabled: true,
