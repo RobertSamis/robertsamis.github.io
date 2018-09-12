@@ -1,2 +1,2 @@
-# RobertSamis.github.io
+# robertsamis.github.io
 My static website
